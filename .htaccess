@@ -1,0 +1,43 @@
+# Désactiver l'affichage du listing des répertoires
+Options -Indexes
+
+# Bloquer l'accès à certains fichiers sensibles
+<FilesMatch "(.htaccess|wp-config.php|php.ini|phpinfo.php|config.php|/\.env)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Bloquer les tentatives d'accès à des fichiers sensibles par l'URL
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/(.git|wp-config\.php|php\.ini|phpinfo\.php|config\.php|\.env) [NC]
+RewriteRule .* - [F,L]
+
+# Bloquer l'accès aux fichiers de configuration Apache
+<FilesMatch "^\.ht">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+# Empêcher l'inclusion de fichiers .htaccess distants
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?shoptwo\.shop [NC]
+RewriteRule \.htaccess$ - [F]
+
+
+# Pages d'erreur personnalisées
+ErrorDocument 400 /infos/400.php
+ErrorDocument 401 /infos/401.php
+ErrorDocument 403 /infos/403.php
+ErrorDocument 404 /infos/404.php
+ErrorDocument 500 /infos/500.php
+
+# Interdire l'accès à /purchases/page/index.php
+RewriteCond %{REQUEST_URI} ^/purchases/page/market-page.php$
+RewriteRule ^ - [F]
+
+# Interdire l'accès au dossier /includes/
+RewriteCond %{REQUEST_URI} ^/includes/.*$
+RewriteRule ^ - [F]
+
+# Ajustements pour l'upload de fichiers
