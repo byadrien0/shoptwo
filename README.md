@@ -72,11 +72,7 @@ Modify the configuration file:
 📂 **`/includes/session_config`**
 
 ```php
-[...]
-
 $cookieParams['domain'] = 'your_url'; // Assurez-vous que le domaine est correct
-
-[...]
 ```
 
 ---
@@ -179,4 +175,9 @@ Feel free to **contribute** or **ask questions** about the project via **issues*
 ![image](https://github.com/user-attachments/assets/226c5513-0403-446e-ac32-0995da30fadd)
 
 ---
+
+![image](https://github.com/user-attachments/assets/b4a3deaf-a8cb-425e-b9e3-e0b7ee09edcd)
+
+---
+
 
