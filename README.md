@@ -20,7 +20,6 @@ The site is primarily built in **French** 🇫🇷, but it can be easily transla
 It is **strictly forbidden** to:
 
 - Impersonate the **owner**, **creator**, or **distributor** of the site.
-- Use the site or its source code for **personal profit**.
 
 However, **modifications** are **allowed and encouraged** to **improve the site's features**. Each accepted and added feature will be **credited to its author**.
 
