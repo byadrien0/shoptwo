@@ -102,7 +102,7 @@ $endpoint_secret = 'YOUR_WEBHOOK_STRIPE'; // Replace with your Stripe webhook se
 
 A **blank database** with all necessary tables is available in the root directory of the project.  
 
-📂 **File:** `adnow.sql`  
+📂 **File:** `shoptwo.sql`  
 
 To set up the database, simply import this SQL file into your MySQL server (or in phpmyadmin)
 
